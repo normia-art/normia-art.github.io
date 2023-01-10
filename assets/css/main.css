@@ -28,6 +28,6 @@
     }
 
     .legal {
-        @apply text-left;
+        @apply text-left items-start;
     }
   }

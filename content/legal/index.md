@@ -8,10 +8,10 @@ classes: legal
 
 ## PROPRIÉTÉ & DIRECTION DE PUBLICATION
 
-Marion Person - 7 rue de Domloup 35410 Nouvoitou, France \
-hello@normia.fr \
+Marion Person - 7 rue de Domloup 35410 Nouvoitou, France\
+hello@normia.fr\
 SIRET : 94791260600011\
-Code APE : 9003A \
+Code APE : 9003A
 
 ## HÉBERGEMENT
 
