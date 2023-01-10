@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Fraunces, serif;
+        @apply text-center leading-relaxed;
+    }
+    h1 {
+        @apply text-4xl mb-3;
+    }
+    h2 {
+        @apply mb-3;
+    }
+    p {
+        @apply font-light mb-3;
+    }
+
+    img[alt=normia_instagram] { 
+        @apply w-8 mx-auto;
+     }
+}
+
+@layer components {
+    .large-image {
+      @apply mx-auto mb-16 w-3/4;
+    }
+
+    .legal {
+        @apply text-left;
+    }
+  }

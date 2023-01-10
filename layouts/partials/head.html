@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="A general guide on the use of meta tags in html pages"
+/>
+<meta name="keywords" content="normia,illustratrice" />
+<meta property="og:title" content="Normia illustratrice" />
+<meta property="og:site_name" content="Normia" />
+<meta property="og:url" content="https://normia.fr" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap"
+  rel="stylesheet"
+/>
+<!-- {{ $styles := resources.Get "css/main.css" | postCSS }} -->
+{{ $styles := resources.Get "css/style.css" }} {{ if .Site.IsServer }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess
+}}
+<link
+  rel="stylesheet"
+  href="{{ $styles.RelPermalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
+/>
+{{ end }}
+
+<title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>

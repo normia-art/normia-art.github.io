@@ -1,0 +1,14 @@
+{{ define "main"}}
+<main id="main">
+  <div class="mx-auto flex flex-col items-center w-4/5 md:w-7/12">
+    <div class="pb-8 lg:w-4/6">
+        {{ $image := resources.Get "images/normia_404.jpg" }}
+        <img src="{{ $image.RelPermalink }}" />
+    </div>
+    <h1 id="title">Il n'y a rien ici...</h1>
+    <p>
+    <a href="{{ "" | relURL }}">Retour à l'accueil</a>
+    </p>
+  </div>
+</main>
+{{ end }}
