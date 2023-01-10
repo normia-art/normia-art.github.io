@@ -1,7 +1,7 @@
 ---
 title: "Mentions légales"
 date: 2023-01-06T21:38:31+01:00
-classes: legal
+layout: legal
 ---
 
 # Mentions légales
