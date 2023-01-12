@@ -6,7 +6,10 @@
   content="Normia, illustratrice indépendante.
   Découvrez mon portfolio ou contactez-moi pour me parler de votre projet d’illustration."
 />
-<meta name="keywords" content="normia,illustratrice" />
+<meta
+  name="keywords"
+  content="normia,Illustratrice,Illustration,Illustrateur,Jeunesse,Édition,Presse,Dessin,Art,Artiste,Semi-réaliste,Couleur,Personnages,Famille,Enfants"
+/>
 <meta property="og:title" content="Normia, illustratrice indépendante." />
 <meta property="og:site_name" content="Normia" />
 <meta property="og:url" content="https://normia.fr" />
@@ -26,8 +29,7 @@
   href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap"
   rel="stylesheet"
 />
-<!-- {{ $styles := resources.Get "css/main.css" | postCSS }} -->
-{{ $styles := resources.Get "css/style.css" }} {{ if .Site.IsServer }}
+{{ $styles := resources.Get "css/style.css" | postCSS }} {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 {{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess
 }}
@@ -36,6 +38,28 @@
   href="{{ $styles.RelPermalink }}"
   integrity="{{ $styles.Data.Integrity }}"
 />
-{{ end }}
+{{ end }} {{ $favicon := resources.Get "apple-touch-icon.png" }}
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="{{ $favicon.RelPermalink }}"
+/>
+
+{{ $favicon := resources.Get "favicon-32x32.png" }}
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{{ $favicon.RelPermalink }}"
+/>
+{{ $favicon := resources.Get "favicon-16x16.png" }}
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{{ $favicon.RelPermalink }}"
+/>
+{{ $favicon := resources.Get "site.webmanifest" }}
+<link rel="manifest" href="{{ $favicon.RelPermalink }}" />
 
 <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>

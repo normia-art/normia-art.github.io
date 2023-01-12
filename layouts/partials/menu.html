@@ -10,5 +10,12 @@
     <a href="{{ .URL }}">{{ .Name }}</a>
     </li>
     {{ end }}
+    <li
+      class="relative text-center px-6 text-sm uppercase pb-2 group">
+      {{ $image := resources.Get "images/insta_logo.png" }}
+      <a href="https://www.instagram.com/n_o_r_m_i_a/" target="_blank">
+      <img class="w-4" src="{{ $image.RelPermalink }}" /></a>
+    </li>
+  </li>
   </ul>
 </nav>

@@ -9,38 +9,62 @@ layout: grid
 resources:
   - title: L'écolière
     src: ecoliere.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 1
   - title: Firmin & Cie
     src: firmin.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 2
   - title: La tête dans les nuages
     src: nuages.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 3
   - title: Mon beau sapin
     src: sapin.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 4
   - title: Village de Noël
     src: village.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 5
   - title: Emballage
     src: emballage.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 6
   - title: Premiers flocons
     src: flocons.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 7
   - title: En cuisine
     src: cuisine.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 8
   - title: Portrait de famille
     src: famille.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 9
   - title: Chill
     src: chill.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 10
   - title: Bonne année
     src: bonne_annee.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 11
   - title: Citronnier
     src: citronnier.jpg
-    year: 2022
+    params:
+      year: 2022
+      order: 12
 ---

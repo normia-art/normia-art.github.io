@@ -1,11 +1,7 @@
 {{ define "main" }}
 <main>
   <section id="main" class="mx-auto flex w-4/5 flex-col text-left md:w-7/12">
-    {{ range .Resources }}
-    <div class="pb-8 lg:w-4/6">
-      <img src="{{ .RelPermalink }}" />
-    </div>
-    {{ end }} {{ .Content }}
+    {{ .Content }}
   </section>
 </main>
 {{end}}

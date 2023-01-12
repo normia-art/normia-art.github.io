@@ -2,17 +2,24 @@
 <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
 {{ .Title }} &ndash; {{ .Site.Title }} {{ end }} {{ define "main" }}
 <main>
-  <div class="columns-1 sm:columns-2 md:columns-3">
-    {{ range .Resources }}
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3">
+    {{ range sort .Resources "Params.order" "desc" }} {{ $image := .Resize
+    "1024x" }}
+
     <div class="group relative mb-4 aspect-square w-full">
       <div class="top-0">
-        <img class="" src="{{ .RelPermalink }}" loading="lazy" />
+        <img
+          class=""
+          alt="{{.Title}}"
+          src="{{ $image.RelPermalink | safeURL }}"
+          loading="lazy"
+        />
       </div>
       <div
         class="absolute inset-0 flex flex-col content-center justify-center overflow-hidden bg-white/80 text-center align-middle opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
       >
         <div class="text-2xl font-medium">{{.Title}}</div>
-        <div class="text-lg">2022</div>
+        <div class="text-lg">{{.Params.year}}</div>
       </div>
     </div>
     {{ end }}
