@@ -3,8 +3,9 @@
 {{ .Title }} &ndash; {{ .Site.Title }} {{ end }} {{ define "main" }}
 <main>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3">
-    {{ range $index, $image := sort .Resources "Params.order" "desc" }} {{
-    $image := $image.Resize "800x webp" }}
+    {{ range $index, $image := sort .Resources "Params.order" "desc" }} {{ if
+    strings.HasSuffix $image.RelPermalink "jpg" }} {{ $image := $image.Resize
+    "800x webp" }} {{ end }}
 
     <div class="group relative mb-4 aspect-square w-full">
       <div class="top-0">

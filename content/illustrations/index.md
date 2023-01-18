@@ -67,4 +67,19 @@ resources:
     params:
       year: 2022
       order: 12
+  - title: Lunettes
+    src: lunettes.webp
+    params:
+      year: 2023
+      order: 13
+  - title: Bus
+    src: bus.jpg
+    params:
+      year: 2023
+      order: 14
+  - title: Galette
+    src: galette.webp
+    params:
+      year: 2023
+      order: 15
 ---
