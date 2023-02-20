@@ -82,4 +82,44 @@ resources:
     params:
       year: 2023
       order: 15
+  - title: Portrait
+    src: portrait.jpg
+    params:
+      year: 2023
+      order: 16
+  - title: Bottes
+    src: botte.jpg
+    params:
+      year: 2023
+      order: 17
+  - title: Transports
+    src: bus_2.jpg
+    params:
+      year: 2023
+      order: 18
+  - title: Soupe
+    src: soupe.jpg
+    params:
+      year: 2023
+      order: 19
+  - title: Fleurs
+    src: dtiys_fleurs.jpg
+    params:
+      year: 2023
+      order: 20
+  - title: La petite fille aux allumettes
+    src: allumettes.jpg
+    params:
+      year: 2023
+      order: 21
+  - title: La petite fille aux allumettes 2
+    src: allumettes_2.jpg
+    params:
+      year: 2023
+      order: 22
+  - title: Sreet style
+    src: dtiys_street.jpg
+    params:
+      year: 2023
+      order: 23
 ---
