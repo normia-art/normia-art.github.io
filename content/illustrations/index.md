@@ -92,9 +92,10 @@ resources:
     params:
       year: 2023
       order: 17
-  - title: Transports
-    src: bus_2.jpg
+  - title: Fleurs
+    src: dtiys_fleurs.jpg
     params:
+      details: DTIYS - @devucii
       year: 2023
       order: 18
   - title: Soupe
@@ -102,8 +103,8 @@ resources:
     params:
       year: 2023
       order: 19
-  - title: Fleurs
-    src: dtiys_fleurs.jpg
+  - title: Transports
+    src: bus_2.jpg
     params:
       year: 2023
       order: 20
@@ -112,14 +113,26 @@ resources:
     params:
       year: 2023
       order: 21
-  - title: La petite fille aux allumettes 2
+  - title: La petite fille aux allumettes
     src: allumettes_2.jpg
     params:
       year: 2023
       order: 22
-  - title: Sreet style
+  - title: Street style
     src: dtiys_street.jpg
     params:
+      details: DTIYS - @doodle_traffic
       year: 2023
       order: 23
+  - title: Plage
+    src: plage.jpg
+    params:
+      year: 2023
+      order: 24
+  - title: Portrait de famille
+    src: famille_2.jpg
+    params:
+      details: Travail de commande
+      year: 2023
+      order: 25
 ---

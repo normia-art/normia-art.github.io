@@ -32,38 +32,31 @@
   href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap"
   rel="stylesheet"
 />
-<noscript><link rel="stylesheet" href="styles.css" /></noscript>
-{{ $styles := resources.Get "css/style.css" | postCSS }} {{ if .Site.IsServer }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-{{ else }} {{ $styles := $styles | minify | fingerprint | resources.PostProcess
-}}
-<link
-  rel="stylesheet"
-  href="{{ $styles.RelPermalink }}"
-  integrity="{{ $styles.Data.Integrity }}"
-/>
-{{ end }} {{ $favicon := resources.Get "apple-touch-icon.png" }}
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="{{ $favicon.RelPermalink }}"
-/>
+{{ partialCached "css.html" . }}
+<noscript>
+  {{ $favicon := resources.Get "apple-touch-icon.png" }}
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="{{ $favicon.RelPermalink }}"
+  />
 
-{{ $favicon := resources.Get "favicon-32x32.png" }}
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="{{ $favicon.RelPermalink }}"
-/>
-{{ $favicon := resources.Get "favicon-16x16.png" }}
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="{{ $favicon.RelPermalink }}"
-/>
-{{ $favicon := resources.Get "site.webmanifest" }}
-<link rel="manifest" href="{{ $favicon.RelPermalink }}" />
+  {{ $favicon := resources.Get "favicon-32x32.png" }}
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="{{ $favicon.RelPermalink }}"
+  />
+  {{ $favicon := resources.Get "favicon-16x16.png" }}
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="{{ $favicon.RelPermalink }}"
+  />
+  {{ $favicon := resources.Get "site.webmanifest" }}
+  <link rel="manifest" href="{{ $favicon.RelPermalink }}" />
 
-<title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+  <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+</noscript>
