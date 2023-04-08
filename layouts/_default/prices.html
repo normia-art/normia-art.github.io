@@ -2,39 +2,35 @@
 <main>
   <section
     id="main"
-    class="mx-auto flex flex-col gap-8 items-left text-left w-4/5 md:w-7/12 {{ .Params.classes }}"
+    class="mx-auto flex flex-col gap-8 items-left text-left w-4/5 lg:w-7/12 {{ .Params.classes }}"
   >
-    {{ .Content }}
-
-    {{ $images := .Resources.ByType "image" }}
-    {{ range $category := .Resources.Match "categories/*.md" }}
-      <div class="flex flex-col md:flex-row gap-12 items-center">
-        <div class="w-full md:w-1/3">
-          {{range $img := $images }}
-            {{ if eq $img.Name $category.Params.params.image }}
-            {{ if
-              strings.HasSuffix $img.RelPermalink "jpg" }} {{ $img := $img.Resize
-              "800x webp" }} {{ end }}
-            <img 
-              class=""
-              alt="{{$category.Title}}"
-              src="{{ $img.RelPermalink | safeURL }}"
-            />
-            {{end}}
-          {{ end }}
-        </div>
-        <div class="w-full md:w-2/3">
-          {{ $category.Content }}
-        </div>
+    {{ .Content }} {{ $images := .Resources.ByType "image" }} {{ range $category
+    := .Resources.Match "categories/*.md" }}
+    <div class="flex flex-col items-center gap-12 lg:flex-row">
+      <div class="w-full lg:w-1/3">
+        {{range $img := $images }} {{ if eq $img.Name
+        $category.Params.params.image }} {{ if strings.HasSuffix
+        $img.RelPermalink "jpg" }} {{ $img := $img.Resize "800x webp" }} {{ end
+        }}
+        <img
+          class=""
+          alt="{{$category.Title}}"
+          src="{{ $img.RelPermalink | safeURL }}"
+        />
+        {{end}} {{ end }}
       </div>
+      <div class="w-full lg:w-2/3">{{ $category.Content }}</div>
+    </div>
+    {{end}} {{ range .Resources.Match "*.md" }}
+    <div class="">{{.Content}}</div>
     {{end}}
-
-    {{ range .Resources.Match "*.md" }}
-      <div class="">
-        {{.Content}}
-      </div>
-    {{end}}
-
-
+    <div class="place-self-center">
+      <a
+        href="mailto:hello@normia.fr"
+        class="border border-solid border-black p-2 px-4 no-underline transition-all duration-200 hover:bg-black hover:text-white active:bg-black active:text-white"
+        >Contactez-moi !</a
+      >
+    </div>
+  </section>
 </main>
 {{end}}

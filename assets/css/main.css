@@ -36,6 +36,10 @@
     ul {
         @apply list-outside list-disc md:pl-2 ml-4;
     }
+
+    a {
+        @apply underline;
+    }
 }
 
 @layer components {
@@ -47,7 +51,4 @@
         @apply text-left items-start;
     }
 
-    .numbered {
-        @apply list-decimal;
-    }
   }
