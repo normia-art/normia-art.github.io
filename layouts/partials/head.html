@@ -55,6 +55,14 @@
     sizes="16x16"
     href="{{ $favicon.RelPermalink }}"
   />
+  {{ $favicon := resources.Get "favicon.ico" }}
+  <link
+    rel="shortcut icon"
+    href="{{ $favicon.RelPermalink }}"
+    type="image/x-icon"
+  />
+  <link rel="icon" href="{{ $favicon.RelPermalink }}" type="image/x-icon" />
+
   {{ $favicon := resources.Get "site.webmanifest" }}
   <link rel="manifest" href="{{ $favicon.RelPermalink }}" />
 
