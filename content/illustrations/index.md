@@ -140,6 +140,11 @@ resources:
     params:
       year: 2023
       order: 26
+  - title: Chouchou
+    src: chouchou.jpg
+    params:
+      year: 2023
+      order: 26
   - title: Pantalaimon
     src: hermine.jpg
     params:
