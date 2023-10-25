@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        font-family: Fraunces, serif;
+        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
         @apply text-center leading-relaxed;
     }
     h1 {

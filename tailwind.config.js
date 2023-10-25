@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  purge: ['layouts/**/*.html'],
+  purge: ["layouts/**/*.html"],
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
     extend: {
       fontFamily: {
-        fraunces: "'Fraunces', serif",
+        futura: "Futura, 'Trebuchet MS', Arial, sans-serif",
       },
       container: {
         center: true,
+      },
+      colors: {
+        primary: "#36C94D",
       },
     },
   },
@@ -17,5 +20,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
-
+};
