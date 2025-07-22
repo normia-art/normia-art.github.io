@@ -21,6 +21,7 @@ body {
     background-color: white;
     min-height: 100vh;
     width: 100vw;
+    max-width: 420px;
     padding: 2rem 1rem;
 }
 
@@ -28,14 +29,8 @@ body {
     text-align: center;
 }
 
-.header img {
-    border: 1px solid black;
-    border-radius: 100%;
-}
-
 h1 {
     color: var(--text-default);
-    font-weight: bold;
     font-size: 2rem;
     letter-spacing: 0;
     margin: 1rem 0;
@@ -58,6 +53,9 @@ h2 {
     line-height: 4rem;
     text-transform: none;
     margin-bottom: 1.1rem;
+    letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .normia-btn:hover {
