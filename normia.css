@@ -1,0 +1,79 @@
+:root {
+    --font-family: 'Inika', sans-serif;
+    --text-default: rgba(148, 148, 148, 1);
+    --text-accent: rgba(121, 189, 205, 1);
+    --backgroud-color: rgb(206, 215, 218);
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-default);
+    min-height: 100vh;
+    background-color: var(--backgroud-color);
+    font-size: 16px;
+}
+
+.frame {
+    background-color: white;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 2rem 1rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+h1 {
+    color: var(--text-default);
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0;
+    margin: 1rem 0;
+}
+
+h2 {
+    color: var(--text-accent);
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.normia-btn {
+    color: var(--text-default);
+    border: 1px solid rgba(222, 222, 222, 1);
+    border-radius: 2rem;
+    height: 4rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 4rem;
+    text-transform: none;
+    margin-bottom: 1.1rem;
+}
+
+.normia-btn:hover {
+    border-color: rgba(222, 222, 222, 1);
+    color: var(--text-default);
+    outline: 2px solid rgba(222, 222, 222, 1);
+}
+
+.normia-btn.accent {
+    color: var(--text-accent);
+    border-color: var(--text-accent);
+
+}
+
+.normia-btn.accent:hover {
+    border-color: var(--text-accent);
+    color: var(--text-accent);
+    outline: 2px solid var(--text-accent);
+}
